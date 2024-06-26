@@ -1,0 +1,1 @@
+la version de python que tiene es la ultima version python 3.12.4
