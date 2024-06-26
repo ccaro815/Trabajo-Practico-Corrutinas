@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacion de box moviendoce de izquierda a derecha</title>
+    <style>
+        #box {
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        async function moveBox() {
+            const box = document.getElementById('box');
+            let position = 0;
+            while (position < 500) {
+                position += 5;
+                box.style.left = position + 'px';
+                await new Promise(resolve => setTimeout(resolve, 50));
+            }
+        }
+        moveBox();
+    </script>
+</body>
+</html>
